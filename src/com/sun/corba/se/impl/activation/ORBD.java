@@ -122,7 +122,7 @@ public class ORBD
             ORB orb = createORB(args);
 
             if (orb.orbdDebugFlag)
-                System.out.println( "ORBD  begins initialization." ) ;
+                System.out.println( "ORBD دەسلەپلەشتۈرۈشنى باشلىدى." ) ;
 
             boolean firstRun = createSystemDirs( ORBConstants.DEFAULT_DB_DIR );
 
@@ -132,12 +132,12 @@ public class ORBD
                 installOrbServers(getRepository(), getActivator());
 
             if (orb.orbdDebugFlag) {
-                System.out.println( "ORBD is ready." ) ;
-                System.out.println("ORBD serverid: " +
+                System.out.println( "ORBD تەييار بولدى." ) ;
+                System.out.println("ORBD مۇلازىمەت نۇمۇرى: " +
                         System.getProperty(ORBConstants.SERVER_ID_PROPERTY));
-                System.out.println("activation dbdir: " +
+                System.out.println("ئاكتىپلاش ساندان مۇندەرىجىسى:" +
                         System.getProperty(ORBConstants.DB_DIR_PROPERTY));
-                System.out.println("activation port: " +
+                System.out.println("ئاكتىپلاش پورت نۇمۇرى:" +
                         System.getProperty(ORBConstants.ORBD_PORT_PROPERTY));
 
                 String pollingTime = System.getProperty(
@@ -146,8 +146,8 @@ public class ORBD
                     pollingTime = Integer.toString(
                         ORBConstants.DEFAULT_SERVER_POLLING_TIME );
                 }
-                System.out.println("activation Server Polling Time: " +
-                        pollingTime + " milli-seconds ");
+                System.out.println("ئاكتىپلاس مۇلازېمىتىر دەۋرىيلىك ۋاقتى:" +
+                        pollingTime + " مىللىسكۇنىت ");
 
                 String startupDelay = System.getProperty(
                     ORBConstants.SERVER_STARTUP_DELAY);
@@ -155,7 +155,7 @@ public class ORBD
                     startupDelay = Integer.toString(
                         ORBConstants.DEFAULT_SERVER_STARTUP_DELAY );
                 }
-                System.out.println("activation Server Startup Delay: " +
+                System.out.println("ئاكتىپلاس مۇلازېمىتىر باشلاس" +
                         startupDelay + " milli-seconds " );
             }
 
